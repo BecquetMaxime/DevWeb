@@ -1,0 +1,15 @@
+@media only screen and (max-width: 420px) { /* version mobile */  
+
+	
+#content img{width:100%;}
+
+
+}
+
+
+@media screen and (max-width: 800px) {   /* version tablette */
+
+#content img{width:100%;}
+
+
+}
