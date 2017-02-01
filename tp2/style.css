@@ -1,8 +1,13 @@
+#header {
+background : url("iut.jpeg") center center no-repeat;background-size:300px;
+	}
+
+
 @media only screen and (max-width: 420px) { /* version mobile */  
 
 	
 #content img{width:100%;}
-
+#header {background : url("iut.jpg")}
 
 }
 
