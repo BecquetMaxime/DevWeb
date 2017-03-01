@@ -101,19 +101,22 @@ position : relative;
 
 	
 #header{width:100%;height:auto;}
-#header img{width:70%;height:auto;margin-left:45px;}
+#header img{width:90%;height:auto;margin-left:45px;}
 #images{height:auto;}
-#image1{height:auto;width:100%;}
-#image2{height:auto;width:100%;}
-#image3{height:auto;width:100%;}
-#image4{height:auto;width:100%;}
-#geoloc{height:auto;width:100%;}
+#image1{height:auto;width:100%;margin-right:0px;}
+#image2{height:auto;width:100%;margin-right:0px;}
+#image3{height:auto;width:100%;margin-right:0px;}
+#image4{height:auto;width:100%;margin-right:0px;}
+#geoloc{height:auto;width:100%;margin-right:0px;border-right:0px solid black;}
 #geoloc iframe{width:100%;}
 #form{height:auto;width:100%;}
 #form input{height:auto;width:100%;}
 #footer{height:auto;width:100%;}
+#form input{margin-right:0px;}    
+    
 
-ul.myTopnav li:not(:first-child) {display:none;}
+ ul.myTopnav li:not(:first-child) {display:none;}
+    
 	
 	ul.myTopnav li.icon{
 		float: right;
@@ -125,7 +128,7 @@ ul.myTopnav li:not(:first-child) {display:none;}
 	ul.myTopnav.responsive li.icon{
 		position: absolute;
 		right: 0;
-		top: 0;
+		top: 0;display:inline;
 	}
 	
 	ul.myTopnav.responsive li{
@@ -160,18 +163,22 @@ ul.myTopnav li:not(:first-child) {display:none;}
 
     #nav li:hover ul.subs {
         display: none;
+        visibility: hidden;
     }
 
     #nav li #s1:target + ul.subs,
     #nav li #s2:target + ul.subs {
         display: block;
     }
+    #header ul.myTopnav{visibility: hidden;}
+    #header ul.myTopnav li.icon{visibility: visible;}
+    #header ul.myTopnav.responsive{visibility: visible;}
 
     #nav ul.subs > li {
         display: block;
         width: auto;
         float: none;
-
+    }
 #header li::before { content: "";}
 
 #header li:first-child::before {content: "";}
@@ -179,9 +186,96 @@ ul.myTopnav li:not(:first-child) {display:none;}
 
 
 }
-@media screen and (max-width: 800px) {   /* version tablette */
+    
 
-#header{width:100%;height:auto;}
-#header img{width:70%;height:auto;margin-left:45px;}
 
+@media only screen and (min-width:420px) and (max-width: 800px) {   /* version tablette */
+
+#header{width:100%;height:auto;text-align:center;}
+#header img{width:90%;height:auto;}
+#images{height:auto;}
+#image1{height:auto;width:50%;margin-right:0px;}
+#image2{height:auto;width:50%;margin-right:0px;}
+#image3{height:auto;width:50%;margin-right:0px;}
+#image4{height:auto;width:50%;margin-right:0px;}
+#geoloc{height:auto;width:50%;margin-right:0px;border-right:0px solid black;}
+#geoloc iframe{width:100%;}
+#form{width:45%;border-left:1px solid black;padding-left:10px;}
+#form input{height:auto;width:100%;}
+#footer{height:auto;width:100%;border-top: 1px solid black;height:50px;float:left;}
+#form input{margin-right:0px;} 
+
+    
+    
+    
+    ul.myTopnav li:not(:first-child) {display:none;}
+    
+	
+	ul.myTopnav li.icon{
+		float: right;
+		display: inline-block;
+	}
+	
+	ul.myTopnav.responsive{position:relative;}
+	
+	ul.myTopnav.responsive li.icon{
+		position: absolute;
+		right: 0;
+		top: 0;display:inline;
+	}
+	
+	ul.myTopnav.responsive li{
+		float:none;
+		display:inline;
+	}
+	
+	ul.myTopnav.responsive li a{
+		display:block;
+		text-align:left;
+	}
+   
+    #header{
+	text-align: center;
+	}
+	
+	#header img{
+	width:25%;
+	height:25%;
+	}
+
+    #nav > li {
+    border-bottom: 5px solid transparent;
+    float: none;
+    margin-bottom: -5px;
+    }
+    
+    #nav ul.subs {
+        position: relative;
+        top: 0;
+    }
+
+    #nav li:hover ul.subs {
+        display: none;
+        visibility: hidden;
+    }
+
+    #nav li #s1:target + ul.subs,
+    #nav li #s2:target + ul.subs {
+        display: block;
+    }
+    #header ul.myTopnav{visibility: hidden;}
+    #header ul.myTopnav li.icon{visibility: visible;}
+    #header ul.myTopnav.responsive{visibility: visible;}
+
+    #nav ul.subs > li {
+        display: block;
+        width: auto;
+        float: none;
+    }
+#header li::before { content: "";}
+
+#header li:first-child::before {content: "";}
+#header li:last-child::before {content: "";}
+
+    
 }
